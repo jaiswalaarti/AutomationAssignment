@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" thread-count="4" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.visionit.automation.testlistener.ExtentReportListener" />
+		<listener class-name="com.visionit.automation.testlistener.ScreenshotListener" />
+		<listener class-name="com.visionit.automation.testlistener.PdfListener" />
+	</listeners>
+	
+		  <test name="Automation Practice App Test With Chrome" parallel="methods">
+				<parameter name="browser" value="chrome"/>
+		    <classes> 
+		      <class name="com.visionit.automation.tests.LandingPageTest"/>
+		      <class name="com.visionit.automation.tests.RegisterPageTest"/>
+		      <class name="com.visionit.automation.tests.SocialMediaPagesTest"/>
+		    </classes>
+		  </test> <!-- Test -->
+		  
+		  <test name="Automation Practice App Test With Firefox" parallel="methods">
+				<parameter name="browser" value="firefox" />
+		    <classes>
+		      <class name="com.visionit.automation.tests.LandingPageTest"/>
+		      <class name="com.visionit.automation.tests.RegisterPageTest"/>
+		      <class name="com.visionit.automation.tests.SocialMediaPagesTest"/>
+		    </classes>
+		  </test>  
+	
+  
+</suite> <!-- Suite -->
