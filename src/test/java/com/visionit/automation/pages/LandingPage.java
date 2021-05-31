@@ -93,13 +93,10 @@ public class LandingPage extends BasePage  {
 		waitUtil = new WaitUtil();
 	}
 	
-
 	public void clickonSignin() {
 		elementActions.doClick(SigninButtonElement);
-		
 	}
 	
-
 	 public void LoginIntoAccount() {
 		 elementActions.doSendKeys(registeredEmailidElement, AppConstants.REGISTERED_EMAIL_lId);
 		 elementActions.doSendKeys(alreadyCreatedPasswordElement, AppConstants.REGISTERED_PSSWRD);
@@ -160,8 +157,8 @@ public class LandingPage extends BasePage  {
        public void EndToEndUserJourneyFeature()  {
     	   elementActions.doClick(SigninButtonElement);
     	   elementActions.doSendKeys(registeredEmailidElement, AppConstants.REGISTERED_EMAIL_lId);
-  		   elementActions.doSendKeys(alreadyCreatedPasswordElement, AppConstants.REGISTERED_PSSWRD);
-  		   elementActions.doClick(clickOnSignInButton1);
+           elementActions.doSendKeys(alreadyCreatedPasswordElement, AppConstants.REGISTERED_PSSWRD);
+           elementActions.doClick(clickOnSignInButton1);
     	   elementActions.doClick(tShirtElement);
     	   logger.info("clicked on T-Shirt");
     	   elementActions.waitForElementClickable(fadedShortSleevesTshirtElement);
@@ -200,9 +197,7 @@ public class LandingPage extends BasePage  {
            logger.info("clicked on i confirm my order");
            logger.info("order comleted message displayed is : "+elementActions.doGetText(ordercompleteMessage));
            logger.info("The Amount Display is :"+elementActions.doGetText(amount));
-           
-        	   
-           }
+            }
        
 }
        
