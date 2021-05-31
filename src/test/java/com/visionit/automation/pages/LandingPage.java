@@ -182,7 +182,6 @@ public class LandingPage extends BasePage  {
            logger.info("The Total price of the product added to cart is : "+elementActions.doGetText(TotalPriceOfProductAddedToCart));
            elementActions.doClick(ProcedeToCheckOut1);  
            logger.info("proceed to check out 1st time");
-           Assert.assertEquals(elementActions.doGetText(TotalPriceOfProductAddedToCart),AppConstants.PRODUCT_NAME,"Incorrect product name displayed");
            logger.info("The product name diplay for user is : "+elementActions.doGetText(userSeecThisProductNameElement));
            logger.info("The product is in : "+elementActions.doGetText(InStockElement));
            logger.info("Unit price is : "+elementActions.doGetText(unitPrice));
